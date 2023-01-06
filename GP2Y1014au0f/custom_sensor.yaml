@@ -45,13 +45,14 @@ sensor:
     update_interval: 30s
  
 binary_sensor:
+#button
   - platform: gpio
     pin: D10
     name: TTP223
     on_press:
       then:
         - switch.toggle: led_switch
- 
+ #output
 switch:
   - platform: gpio
     pin: D5
